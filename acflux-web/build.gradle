@@ -1,0 +1,5 @@
+apply plugin: 'war'
+description = 'acflux-web'
+dependencies {
+    compile libraries.spring_boot
+}
