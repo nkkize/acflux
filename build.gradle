@@ -2,10 +2,6 @@ apply plugin: "eclipse"
 apply plugin: "eclipse-wtp"
 apply plugin: 'io.spring.dependency-management'
 
-project(':acflux-web'){
-	apply plugin: 'spring-boot'
-}
-
 buildscript {
 	ext {
 		springBootVersion = '1.4.1.RELEASE'
@@ -13,6 +9,8 @@ buildscript {
 	
 	ext.libraries = [
 		spring_boot: 'org.springframework.boot:spring-boot-starter:'+springBootVersion,
+		spring_mvc: 'org.springframework.boot:spring-boot-starter-web:'+springBootVersion,
+		spring_data_jpa: 'org.springframework.boot:spring-boot-starter-data-jpa:'+springBootVersion
 	]
 	repositories {
 	    mavenCentral()
@@ -25,6 +23,7 @@ buildscript {
 
 subprojects {
   apply plugin: 'java'
+  apply plugin: 'maven'
   sourceCompatibility = 1.8
   targetCompatibility = 1.8
   
