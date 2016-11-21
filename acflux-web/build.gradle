@@ -5,4 +5,5 @@ dependencies {
 	compile project(':acflux-service')
     compile libraries.spring_boot
     compile libraries.spring_mvc
+    compile libraries.spring_thymeleaf
 }
