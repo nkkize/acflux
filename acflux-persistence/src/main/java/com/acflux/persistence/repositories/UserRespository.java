@@ -16,5 +16,6 @@ import com.acflux.persistence.entities.User;
 @Repository
 @Transactional
 public interface UserRespository extends JpaRepository<User, Long>{
-
+	
+	public User findByUsername(String username);
 }

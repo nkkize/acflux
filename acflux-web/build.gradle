@@ -2,7 +2,7 @@ apply plugin: 'war'
 apply plugin: 'spring-boot'
 description = 'acflux-web'
 dependencies {
-	compile project(':acflux-persistence')
+	compile project(':acflux-service')
     compile libraries.spring_boot
     compile libraries.spring_mvc
 }
