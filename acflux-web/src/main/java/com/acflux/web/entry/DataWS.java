@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.acflux.web.entry;
 
 import javax.ws.rs.GET;
@@ -10,6 +7,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.stereotype.Component;
 
+import com.acflux.common.response.ResponseData;
+
 /**
  * @author narenderk
  *
@@ -17,11 +16,21 @@ import org.springframework.stereotype.Component;
 @Component
 @Path("/")
 public class DataWS {
-	
+
 	@GET
 	@Produces(value = MediaType.TEXT_PLAIN)
 	@Path("/test")
-	public String createUser() {
+	public String test() {
 		return "Data from DataWS";
+	}
+
+	@GET
+	@Produces(value = MediaType.APPLICATION_JSON)
+	@Path("/foo")
+	public ResponseData sendRes() {
+		ResponseData responseData = new ResponseData();
+		responseData.setData("Response from DataWS");
+		responseData.setStatus(200);
+		return responseData;
 	}
 }

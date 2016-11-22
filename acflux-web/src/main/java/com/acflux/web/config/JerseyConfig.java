@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.acflux.web.config;
 
 import javax.ws.rs.ApplicationPath;
