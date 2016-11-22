@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 public class User extends AbstractAuditableEntity{
 	
 	@NotNull
-	@Column(name = "user_name", unique = true)
+	@Column(name = "username", unique = true)
 	private String username;
 	
 	@NotNull
