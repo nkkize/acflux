@@ -2,9 +2,10 @@ apply plugin: 'war'
 apply plugin: 'spring-boot'
 description = 'acflux-web'
 dependencies {
-	compile project(':acflux-service')
+	compile project(':acflux-security')
     compile libraries.spring_boot
     compile libraries.spring_mvc
     compile libraries.spring_thymeleaf
     compile libraries.spring_jersey
+	compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '3.0.1.RELEASE'   
 }
