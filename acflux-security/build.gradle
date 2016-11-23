@@ -1,4 +1,4 @@
 description = 'acflux-security'
 dependencies {
-  
+   compile libraries.spring_security
 }
